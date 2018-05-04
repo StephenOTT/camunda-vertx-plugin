@@ -6,7 +6,6 @@ import io.vertx.core.Future;
 
 import io.vertx.config.ConfigRetriever;
 import io.vertx.config.ConfigStoreOptions;
-import io.vertx.core.json.Json;
 import io.vertx.core.json.JsonObject;
 import io.vertx.config.ConfigRetrieverOptions;
 
