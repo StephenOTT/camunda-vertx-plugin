@@ -178,6 +178,8 @@ See the vert1.js file or see the following:
 
 **Note:** this is a very quick implementation that has very little error handling.
 
+**Note about Jedis Usage:** the Java lib Jedis is used for access to Redis in our example below. The usage of Jedis is used instead of the Vertx Redis client because the goal was to make the usage of Redis access as "copy and paste-able" into a Camunda Script Task, as possible.  In proper practice you would use the Vertx redis client rather than Jedis.  Therefore do not look at the use of "`executeBlocking()`" functions as "proper practice" in the context of Vertx usage.
+
 ```js
 exports.vertxStart = function() {
  console.log("This is a Javascript Vertx Verticle Running")
