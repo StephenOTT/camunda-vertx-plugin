@@ -1,0 +1,28 @@
+version: '3.2'
+
+services:
+  camunda:
+    build: .
+    environment:
+      - JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Duser.timezone=America/Montreal
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    volumes:
+      - ./volumes/verticles:/verticles
+      - ./volumes/VertxConfig:/VertxConfig
+    networks:
+      - mynetwork
+
+  redisdb:
+    image: redis
+    ports:
+      - '6379:6379'
+    networks:
+      - mynetwork
+    volumes:
+      - ./volumes/redis:/data
+
+networks:
+  mynetwork:
+    driver: bridge

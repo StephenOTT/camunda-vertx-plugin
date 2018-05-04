@@ -1,0 +1,13 @@
+# Verticle Configurations
+verticles:
+    my_verticle_steve:
+        name: "my verticle steve"
+        path: "/verticles/vert1/vert1.js"
+        deployment_options:
+          worker: false
+          instances: 1
+          # isolationGroup:
+          # isolatedClasses:
+          config:
+              value1: "dog"
+              value2: "cat"
