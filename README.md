@@ -11,6 +11,12 @@ You can deploy a verticle in any of the supported Vertx languages such as:
 1. Kotlin
 1. Scala
 
+# Requirements
+
+1. Java 8
+1. Tested with Camunda BPM 7.8 Tomcat
+1. Tested with Vertx 3.5.1 (this is what is in the Plugin Jar)
+
 
 # How to use
 
@@ -147,6 +153,8 @@ Where through a POST you can "create" a approval and then "complete" the approva
 When you POST the completion you provide a task response which is a variable value that is injected into the process.
 
 This is a useful scenario to provide Email based task completion.
+
+In this use case we use Redis to store the Approvals objects.  We use Jedis to communicate with Redis.  See the docker folder and the docker-compose.yml file for further configuration details.
 
 ## Screenshots
 
