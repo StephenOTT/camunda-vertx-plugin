@@ -12,7 +12,7 @@ verticles:
                 value1: "dog"
                 value2: "cat"
     external_task_notifier:
-        name: "Camunda External Task TCP Notifier"
+        name: "Camunda External Task WebSocket Notifier"
         path: "/verticles/external-task-notifier-tcp/external-task-tcp.js"
         deployment_options:
             worker: false
