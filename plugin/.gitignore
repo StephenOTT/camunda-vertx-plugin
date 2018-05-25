@@ -30,3 +30,5 @@ node_modules
 .bundle
 gemfile.lock
 
+# Redis db files
+.rdb

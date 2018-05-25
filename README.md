@@ -275,7 +275,7 @@ function approvalComplete(taskId, completionKey, taskResponse){
 }
 
 function taskComplete(taskId, taskResponse){
-  // Uses Java.asJSONCompatiable to ensure that the JSON 
+  // Uses Java.asJSONCompatiable() to ensure that the JSON 
   // object is returned to Camunda as a Map<String, Object> 
   // as per required by the complete() method.
   processEngine.getTaskService()

@@ -4,10 +4,20 @@ verticles:
         name: "my verticle steve"
         path: "/verticles/vert1/vert1.js"
         deployment_options:
-          worker: false
-          instances: 1
-          # isolationGroup:
-          # isolatedClasses:
-          config:
-              value1: "dog"
-              value2: "cat"
+            worker: false
+            instances: 1
+            # isolationGroup:
+            # isolatedClasses:
+            config:
+                value1: "dog"
+                value2: "cat"
+    external_task_notifier:
+        name: "Camunda External Task TCP Notifier"
+        path: "/verticles/external-task-notifier-tcp/external-task-tcp.js"
+        deployment_options:
+            worker: false
+            instances: 1
+            config:
+                topics: ""
+                camunda_url: "http://"
+                "lock_period": 1000

@@ -1,0 +1,15 @@
+<script src="http://cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js"></script>
+
+<!-- If running locally make sure to enable CORS * in the browser or you will get a Cross Origin error -->
+<!-- Run in browser with Incognito mode for best results, otherwise caching causes issues -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vertx/3.5.1/vertx-eventbus.min.js'></script>
+
+<script>
+  var eb = new EventBus('http://localhost:8081/eventbus');
+
+  eb.onopen = function() {
+    eb.registerHandler('send.to.client', function(error, message) {
+      console.log(message);
+    });
+  }
+</script>
